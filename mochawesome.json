@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-18T21:07:48.236Z",
-    "end": "2022-03-18T21:08:09.148Z",
-    "duration": 20912,
+    "start": "2022-03-18T21:09:40.437Z",
+    "end": "2022-03-18T21:10:04.499Z",
+    "duration": 24062,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "9f1db15f-abe4-4441-9fcf-471f31e6a9e9",
+      "uuid": "37d100d8-b974-4b9a-a907-6821d0da5995",
       "title": "",
       "fullFile": "cypress/integration/userRegistration.spec.js",
       "file": "cypress/integration/userRegistration.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f32c4f2c-2d9a-4d18-8f4f-858ce7c3fb7c",
+          "uuid": "23119a58-9b52-4955-ba3b-087cdcd9db80",
           "title": "RegisterUser",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "When I click Sign In then it redirects to AUTHENTICATION page",
               "fullTitle": "RegisterUser When I click Sign In then it redirects to AUTHENTICATION page",
               "timedOut": null,
-              "duration": 5800,
+              "duration": 6756,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.visit('http://automationpractice.com');\ncy.get('.login').click();\ncy.url().should('contain', 'my-account');",
               "err": {},
-              "uuid": "abddf361-ae1a-45de-a238-b1d9bbf7da42",
-              "parentUUID": "f32c4f2c-2d9a-4d18-8f4f-858ce7c3fb7c",
+              "uuid": "531b25ec-61f1-4ee6-b82e-c2aeed2becbb",
+              "parentUUID": "23119a58-9b52-4955-ba3b-087cdcd9db80",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "When I write my email and click on \"Create an account then it redirects me to the user registration screen",
               "fullTitle": "RegisterUser When I write my email and click on \"Create an account then it redirects me to the user registration screen",
               "timedOut": null,
-              "duration": 762,
+              "duration": 736,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "cy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate > span').click();\ncy.url().should('contain', 'authentication&back');",
               "err": {},
-              "uuid": "ec809622-e35e-467c-88dc-f726eedcefcf",
-              "parentUUID": "f32c4f2c-2d9a-4d18-8f4f-858ce7c3fb7c",
+              "uuid": "867813f2-2ea1-4138-ba0a-0c612097b057",
+              "parentUUID": "23119a58-9b52-4955-ba3b-087cdcd9db80",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "When I inform the data and finish, then the registration must be done",
               "fullTitle": "RegisterUser When I inform the data and finish, then the registration must be done",
               "timedOut": null,
-              "duration": 11287,
+              "duration": 12660,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "cy.get('#id_gender2').check();\ncy.get('#customer_firstname').type(chance.first());\ncy.get('#customer_lastname').type(chance.last());\ncy.get('#passwd').type(chance.string());\ncy.get('#days').select(chance.integer({\n  min: 1,\n  max: 30\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1900,\n  max: 2022\n}));\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('#company').type(chance.company());\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#id_state').select(chance.state({\n  full: true\n}));\ncy.get('#postcode').type(chance.zip());\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').type(chance.string());\ncy.get('#submitAccount > span').click();\ncy.url().should('contain', 'my-account');",
               "err": {},
-              "uuid": "288874f9-9619-4a57-b8dd-5f87e01fb1ee",
-              "parentUUID": "f32c4f2c-2d9a-4d18-8f4f-858ce7c3fb7c",
+              "uuid": "2e7d9c80-1ee4-4e85-8657-c2debe9a2a44",
+              "parentUUID": "23119a58-9b52-4955-ba3b-087cdcd9db80",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "abddf361-ae1a-45de-a238-b1d9bbf7da42",
-            "ec809622-e35e-467c-88dc-f726eedcefcf",
-            "288874f9-9619-4a57-b8dd-5f87e01fb1ee"
+            "531b25ec-61f1-4ee6-b82e-c2aeed2becbb",
+            "867813f2-2ea1-4138-ba0a-0c612097b057",
+            "2e7d9c80-1ee4-4e85-8657-c2debe9a2a44"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 17849,
+          "duration": 20152,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
