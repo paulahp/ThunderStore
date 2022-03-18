@@ -1,4 +1,4 @@
-# ThunderStore
+# Automation Test - ThunderStore
 
 The test aims to demonstrate that the registration was successful
 <h1 align="center">
