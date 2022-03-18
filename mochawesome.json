@@ -1,13 +1,13 @@
 {
   "stats": {
-    "suites": 3,
+    "suites": 1,
     "tests": 3,
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2022-03-18T14:43:30.283Z",
-    "end": "2022-03-18T14:43:58.038Z",
-    "duration": 27755,
+    "start": "2022-03-18T15:06:07.963Z",
+    "end": "2022-03-18T15:06:36.280Z",
+    "duration": 28317,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c44d0571-a07f-4134-b0ec-b6bc6db93bf7",
+      "uuid": "0af45cf4-9041-46af-bfc7-2f888ae04f47",
       "title": "",
       "fullFile": "cypress/integration/userRegistration.spec.js",
       "file": "cypress/integration/userRegistration.spec.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "73d69e43-0e57-4246-b439-814ee73e5651",
-          "title": "Access Sign In",
+          "uuid": "0163cfb7-8075-4636-808f-4ca180fe512b",
+          "title": "RegisterUser",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,9 +36,9 @@
           "tests": [
             {
               "title": "When I click Sign In then it redirects to AUTHENTICATION page",
-              "fullTitle": "Access Sign In When I click Sign In then it redirects to AUTHENTICATION page",
+              "fullTitle": "RegisterUser When I click Sign In then it redirects to AUTHENTICATION page",
               "timedOut": null,
-              "duration": 8824,
+              "duration": 8894,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,100 +47,58 @@
               "context": null,
               "code": "cy.visit('http://automationpractice.com');\ncy.get('.login').click();\ncy.url().should('contain', 'my-account');",
               "err": {},
-              "uuid": "bd877f57-e06a-4e78-b363-393592cb8a1f",
-              "parentUUID": "73d69e43-0e57-4246-b439-814ee73e5651",
+              "uuid": "7496692d-cc34-4ae5-b777-7280f8109761",
+              "parentUUID": "0163cfb7-8075-4636-808f-4ca180fe512b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I write my email and click on \"Create an account then it redirects me to the user registration screen",
+              "fullTitle": "RegisterUser When I write my email and click on \"Create an account then it redirects me to the user registration screen",
+              "timedOut": null,
+              "duration": 944,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate > span').click();\ncy.url().should('contain', 'authentication&back');",
+              "err": {},
+              "uuid": "4bd914eb-14d1-405c-8d85-722f9c70e837",
+              "parentUUID": "0163cfb7-8075-4636-808f-4ca180fe512b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "When I inform the data and finish, then the registration must be done",
+              "fullTitle": "RegisterUser When I inform the data and finish, then the registration must be done",
+              "timedOut": null,
+              "duration": 13393,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('#id_gender2').check();\ncy.get('#customer_firstname').type(chance.first());\ncy.get('#customer_lastname').type(chance.last());\ncy.get('#passwd').type(chance.string());\ncy.get('#days').select(chance.integer({\n  min: 1,\n  max: 30\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1900,\n  max: 2022\n}));\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('#company').type(chance.company());\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#id_state').select(chance.state({\n  full: true\n}));\ncy.get('#postcode').type(chance.zip());\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').type(chance.string());\ncy.get('#submitAccount > span').click();\ncy.url().should('contain', 'my-account');",
+              "err": {},
+              "uuid": "3f902e34-6037-4724-9424-ccaa3baa6861",
+              "parentUUID": "0163cfb7-8075-4636-808f-4ca180fe512b",
               "isHook": false,
               "skipped": false
             }
           ],
-          "suites": [
-            {
-              "uuid": "8f3e71f6-508b-4c63-99d6-790a296509eb",
-              "title": "Access your personal information page",
-              "fullFile": "",
-              "file": "",
-              "beforeHooks": [],
-              "afterHooks": [],
-              "tests": [
-                {
-                  "title": "When I write my email and click on \"Create an account then it redirects me to the user registration screen",
-                  "fullTitle": "Access Sign In Access your personal information page When I write my email and click on \"Create an account then it redirects me to the user registration screen",
-                  "timedOut": null,
-                  "duration": 975,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "cy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate > span').click();\ncy.url().should('contain', 'authentication&back');",
-                  "err": {},
-                  "uuid": "8ea3a0a1-ec84-48e1-97fd-8d8db9d4ec8d",
-                  "parentUUID": "8f3e71f6-508b-4c63-99d6-790a296509eb",
-                  "isHook": false,
-                  "skipped": false
-                }
-              ],
-              "suites": [
-                {
-                  "uuid": "1fabc4f0-8e08-4694-b9d3-7ec5b60e2c79",
-                  "title": "UserRegistration",
-                  "fullFile": "",
-                  "file": "",
-                  "beforeHooks": [],
-                  "afterHooks": [],
-                  "tests": [
-                    {
-                      "title": "When I inform the data and finish, then the registration must be done",
-                      "fullTitle": "Access Sign In Access your personal information page UserRegistration When I inform the data and finish, then the registration must be done",
-                      "timedOut": null,
-                      "duration": 14245,
-                      "state": "passed",
-                      "speed": "slow",
-                      "pass": true,
-                      "fail": false,
-                      "pending": false,
-                      "context": null,
-                      "code": "cy.url().should('contain', 'account-creation');\ncy.get('#id_gender2').check();\ncy.get('#customer_firstname').type(chance.first());\ncy.get('#customer_lastname').type(chance.last());\ncy.get('#passwd').type(chance.string());\ncy.get('#days').select(chance.integer({\n  min: 1,\n  max: 30\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1900,\n  max: 2022\n}));\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('#company').type(chance.company());\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#id_state').select(chance.state({\n  full: true\n}));\ncy.get('#postcode').type(chance.zip());\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').type(chance.string());\ncy.get('#submitAccount > span').click();\ncy.url().should('contain', 'my-account');",
-                      "err": {},
-                      "uuid": "dae9d68f-b7fb-4b5c-a289-a694785b35bc",
-                      "parentUUID": "1fabc4f0-8e08-4694-b9d3-7ec5b60e2c79",
-                      "isHook": false,
-                      "skipped": false
-                    }
-                  ],
-                  "suites": [],
-                  "passes": [
-                    "dae9d68f-b7fb-4b5c-a289-a694785b35bc"
-                  ],
-                  "failures": [],
-                  "pending": [],
-                  "skipped": [],
-                  "duration": 14245,
-                  "root": false,
-                  "rootEmpty": false,
-                  "_timeout": 2000
-                }
-              ],
-              "passes": [
-                "8ea3a0a1-ec84-48e1-97fd-8d8db9d4ec8d"
-              ],
-              "failures": [],
-              "pending": [],
-              "skipped": [],
-              "duration": 975,
-              "root": false,
-              "rootEmpty": false,
-              "_timeout": 2000
-            }
-          ],
+          "suites": [],
           "passes": [
-            "bd877f57-e06a-4e78-b363-393592cb8a1f"
+            "7496692d-cc34-4ae5-b777-7280f8109761",
+            "4bd914eb-14d1-405c-8d85-722f9c70e837",
+            "3f902e34-6037-4724-9424-ccaa3baa6861"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 8824,
+          "duration": 23231,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
