@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-03-21T17:04:22.503Z",
-    "end": "2022-03-21T17:04:43.615Z",
-    "duration": 21112,
+    "failures": 0,
+    "start": "2022-03-21T17:04:07.493Z",
+    "end": "2022-03-21T17:04:43.677Z",
+    "duration": 36184,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "16966ba6-cfd2-4453-9561-a4cdcce88874",
+      "uuid": "f264a0c9-9557-4844-b10d-280fabb3d282",
       "title": "",
       "fullFile": "cypress/integration/userRegistration.spec.js",
       "file": "cypress/integration/userRegistration.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b2b8afb4-298e-420f-a8d2-54bc277f8a04",
+          "uuid": "6a24a23d-2c00-4600-b88b-359ab67a7692",
           "title": "RegisterUser",
           "fullFile": "",
           "file": "",
@@ -38,33 +38,29 @@
               "title": "When I inform the data and finish, then the registration must be done",
               "fullTitle": "RegisterUser When I inform the data and finish, then the registration must be done",
               "timedOut": null,
-              "duration": 14212,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 28974,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.visit('http://automationpractice.com');\ncy.get('.login').click();\ncy.url().should('contain', 'my-account');\ncy.get('#email_create').type(chance.email());\ncy.get('#SubmitCreate > span').click();\ncy.url().should('contain', 'authentication&back');\ncy.get('#id_gender2').check();\ncy.get('#customer_firstname').type(chance.first());\ncy.get('#customer_lastname').type(chance.last());\ncy.get('#passwd').type(chance.string());\ncy.get('#days').select(chance.integer({\n  min: 1,\n  max: 30\n}));\ncy.get('#months').select(chance.month());\ncy.get('#years').select(chance.year({\n  min: 1900,\n  max: 2022\n}));\ncy.get('#newsletter').check();\ncy.get('#optin').check();\ncy.get('#company').type(chance.company());\ncy.get('#address1').type(chance.address());\ncy.get('#city').type(chance.city());\ncy.get('#id_state').select(chance.state({\n  full: true\n}));\ncy.get('#postcode').type(chance.zip());\ncy.get('#phone').type(chance.phone());\ncy.get('#phone_mobile').type(chance.phone());\ncy.get('#alias').type(chance.string());\ncy.get('#submitAccount > span').click();\ncy.url().should('contain', 'my-account');",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#id_gender2`, but never found it.\n    at Context.eval (http://automationpractice.com/__cypress/tests?p=cypress/integration/userRegistration.spec.js:2217:8)",
-                "diff": null
-              },
-              "uuid": "dd5cda53-280a-48ae-907e-e9c456c283d0",
-              "parentUUID": "b2b8afb4-298e-420f-a8d2-54bc277f8a04",
+              "err": {},
+              "uuid": "901434d5-2db1-4346-9c78-a9ccb7bb7a0f",
+              "parentUUID": "6a24a23d-2c00-4600-b88b-359ab67a7692",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "dd5cda53-280a-48ae-907e-e9c456c283d0"
+          "passes": [
+            "901434d5-2db1-4346-9c78-a9ccb7bb7a0f"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 14212,
+          "duration": 28974,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
