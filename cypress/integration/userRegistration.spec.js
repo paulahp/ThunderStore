@@ -3,22 +3,17 @@
 var Chance = require('chance');
 var chance = new Chance();
 
+describe('RegisterUser', () => {   
 
-describe('RegisterUser', () => {
-    it('When I click Sign In then it redirects to AUTHENTICATION page', () => {
+    it('When I inform the data and finish, then the registration must be done', () => {
         cy.visit('http://automationpractice.com')
         cy.get('.login').click()
         cy.url().should('contain', 'my-account')
-    });
 
-    it('When I write my email and click on "Create an account then it redirects me to the user registration screen', () => {
         cy.get('#email_create').type(chance.email())
         cy.get('#SubmitCreate > span').click()
 
         cy.url().should('contain', 'authentication&back')
-    });
-
-    it('When I inform the data and finish, then the registration must be done', () => {
 
         cy.get('#id_gender2').check()
         cy.get('#customer_firstname').type(chance.first())
