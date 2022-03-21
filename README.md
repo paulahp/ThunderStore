@@ -1,4 +1,4 @@
-#  → E-commerce - Automation Test with Cypress
+# E-commerce - Automation Test with Cypress
 The test aims to demonstrate that the registration was successful
 <h1 align="center">
 </h1>
